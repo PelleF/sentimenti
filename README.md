@@ -4,7 +4,15 @@ A company sentiment search engine
 
 # How to run BE
 - Install Python
-- Install the dependecies using pip / Conda
+- Install the dependecies using pip
+
+```
+pip install newsapi
+pip install nltk
+pip install django
+```
+
+
 - Navigate to the BE root folder in the terminal
 
 ```cd BE```
