@@ -2,6 +2,7 @@ import datetime
 
 from newsapi import NewsApiClient
 import json
+import spacy
 
 
 class NewsApiClass:
@@ -29,6 +30,21 @@ class NewsApiClass:
 
         return articles
 
+   
+class EntityFilter:
+    
+    def __init__(self):
+        self.nlp = spacy.load("en_core_web_sm")
+        
+        
+    def filter_article(self,articles,keyword):
+        list_of_flitered = []
+        for i in articles:
+            doc = self.nlp(i['title'])
+            entity_property = {token.text:token.label_ for token in doc.ents}
+            if keyword in entity_property and entity_property[keyword]== 'ORG':
+                list_of_flitered.append(i)
+        return list_of_flitered
 
 if __name__ == "__main__":
     news = NewsApiClass()
