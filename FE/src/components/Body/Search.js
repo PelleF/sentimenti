@@ -24,8 +24,10 @@ const Search = () => {
         // Only show results if call is made
         if (searchResult === null) {
             console.log("searchResult was null")
-            return ;
-        } else {
+            return <table></table>
+        }
+
+        if (searchResult[0] !== null && searchResult[1] !== null && searchResult[2] != null) {
             console.log("Mapping found result to html: " + searchResult)
             return <table>
                       <tr>
@@ -48,12 +50,6 @@ const Search = () => {
                     </table>
         }
      }
-                      // This is for the jokes
-                      //<tr>
-                      //  <td>{searchResult.id}</td>
-                      //  <td><a href={searchResult.url} target="_blank">{searchResult.url}</a></td>
-                      //  <td>{searchResult.value}</td>
-                      //</tr>
      const resultTable = formattedResult();
 
     return (
@@ -66,14 +62,6 @@ const Search = () => {
             </div>
             );
 };
-
-            // <ul>
-            //   {useState.results.Object.map(result => (
-            //     <li key={result.id}>
-            //       {result.url} {result.value}
-            //     </li>
-            //   ))}
-            // </ul>
 
 
 export default Search
