@@ -21,7 +21,7 @@ function SearchField() {
              </div>
           <Container>
             <h2 className="presentation-subtitle text-center">
-              Search a company for sentiment analysis
+              Search a company for KYC sentiment analysis
             </h2>
             <Container>
                 <div className="text-center">
