@@ -23,7 +23,7 @@ function IndexHeader() {
               <h1 className="presentation-title">Sentimenti</h1>
             </div>
             <h2 className="presentation-subtitle text-center">
-              A search engine for company sentiment analysis
+              A search engine for KYC sentiment analysis
             </h2>
           </Container>
         </div>
